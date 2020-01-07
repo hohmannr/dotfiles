@@ -1,0 +1,9 @@
+# ignore everything except later specified files and directories
+*
+
+# exceptions 
+!.gitignore
+!.oh-my-zsh
+!.vim
+!.vimrc
+!.zshrc
