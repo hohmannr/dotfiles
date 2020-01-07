@@ -14,7 +14,8 @@
 !.config/i3/config
 
 !.vim/
-!.vim/*
+!.vim/UltiSnips/
+!.vim/UltiSnips/*
 
 !.vimrc
 
