@@ -1,0 +1,90 @@
+global !p
+def braces_matcher(brace):
+    if brace == "[":
+        return "]"
+    elif brace == "(":
+        return ")"
+    elif brace == "{":
+        return "}"
+    elif brace == "'":
+        return "'"
+    elif brace == "\"":
+        return "\""
+    else:
+        return ""
+endglobal
+
+snippet main "main function" b
+int main(int argc, char **argv) {
+    ${0: // Code}
+}
+endsnippet
+
+# general coding snippets
+snippet "([\{\(\[\"\'])" "closing braces (and quotations)" ri
+`!p snip.rv = match.group(2)`$1`!p snip.rv = braces_matcher(match.group(2))`$0
+endsnippet
+
+# structure related
+snippet class "class" b
+class $1 {
+${0:/* Code */}
+};
+endsnippet
+
+snippet enum "enum" b
+enum $1 {
+    ${2:/* Code */}
+};$0
+endsnippet
+
+snippet struct "struct" b
+struct $1 {
+    ${2:/* Code */}
+};$0
+endsnippet
+
+# control strucutres
+snippet for "for loop" b
+for($1; $2; $3) {
+    ${4:/* Code */}
+}$0
+endsnippet
+
+snippet "for[a-z]" "for i" br
+for(int `!p snip.rv = match.group(1)` = 0; `!p snip.rv = match.group(1)` ${1: /* condition */}; i++) {
+    ${2:/* Code */}
+}$0
+endsnippet
+
+snippet while "while loop" b
+while($1) {
+    ${2:/* Code */}
+}$0
+endsnippet
+
+snippet if "if statement" b
+if($1) {
+    ${2:/* Code */}
+}$0
+endsnippet
+
+snippet else "else statement" i
+else {
+    ${1:/* Code */}
+}$0
+endsnippet
+
+snippet elif "else if statement" i
+else if($1) {
+    ${2:/* Code */}
+}$0
+endsnippet
+
+snippet switch "switch statement" b
+switch($1) {
+    ${2: /* cases */}
+    default:
+        $3
+}$0
+endsnippet

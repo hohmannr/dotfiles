@@ -1,0 +1,16 @@
+snippet inm "if __name__ == __main__" b
+if __name__ == "__main__":
+    ${0}    
+endsnippet
+
+snippet def "def tag" b
+def ${1:foo}(${2}):
+    """${3:desc}"""
+    ${0}
+endsnippet
+
+snippet class "class tag" b
+class ${1:foo}(${2}):
+    """${3:desc}"""
+    ${0}
+endsnippet
