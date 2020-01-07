@@ -3,8 +3,9 @@
 
 # exceptions 
 !.gitignore
-!.oh-my-zsh
 !.vim
 !.vimrc
 !.zshrc
-!.config
+!.config/polybar/config
+!.config/rofi/config
+!.config/i3/config
