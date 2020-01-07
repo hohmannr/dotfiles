@@ -1,6 +1,6 @@
 # Convenience
-snippet today "Date"
-`date +%F`
+snippet today "Date" i
+`date +%d`. `date +%B` `date +%Y`
 endsnippet
 
 snippet box "Box"
@@ -11,6 +11,7 @@ $0
 endsnippet
 
 # Latex commands
+priority 10
 snippet begin "begin{} / end{}" b
 \begin{$1}
 	$0
@@ -18,7 +19,7 @@ snippet begin "begin{} / end{}" b
 endsnippet
 
 snippet item "\item" b
-\item
+\item $0
 endsnippet
 
 snippet "problem ([0-9]+)" "Homework section format" rb
@@ -230,20 +231,25 @@ snippet Lambda "\Lambda" i
 \Lambda
 endsnippet
 
+# Document preprints
+snippet recipe "Recipe preprint" b
+\documentclass[12pt]{article}
+\title{$1}
+\date{$2}
 
+\begin{document}
+\maketitle
 
+\section*{Zutaten}
+\begin{center}
+\begin{tabular}{ c c }
+    $3
+\end{tabular}
+\end{center}
 
+\section*{Zubereitung}
+$0
 
-
-
-
-
-
-
-
-
-
-
-
-
+\end{document} 
+endsnippet
 
