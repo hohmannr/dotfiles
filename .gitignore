@@ -3,7 +3,7 @@
 
 # exceptions 
 !.gitignore
-!.vim
+!.vim/*
 !.vimrc
 !.zshrc
 !.config/polybar/config
