@@ -4,9 +4,17 @@
 # exceptions 
 !.gitignore
 !.zshrc
+
+!.config/
+!.config/polybar/
 !.config/polybar/config
+!.config/rofi/
 !.config/rofi/config
+!.config/i3
 !.config/i3/config
+
+!.vim/
 !.vim/*
+
 !.vimrc
 
