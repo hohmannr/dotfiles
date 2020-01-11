@@ -1,4 +1,4 @@
-# ignore everything except later specified files and directories
+# ignore everything except specified files and directories
 *
 
 # exceptions 
@@ -10,12 +10,19 @@
 !.config/polybar/config
 !.config/rofi/
 !.config/rofi/config
-!.config/i3
+!.config/i3/
 !.config/i3/config
+!.config/nvim/
+!.config/nvim/init.vim
+!.config/neofetch/
+!.config/neofetch/config.conf
 
 !.vim/
 !.vim/UltiSnips/
 !.vim/UltiSnips/*
 
 !.vimrc
+
+!.scripts/
+!.scripts/*
 

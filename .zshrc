@@ -4,6 +4,7 @@
 # change environmental variables
 export ZSH="/home/akio/.oh-my-zsh"
 export PATH=$PATH:$HOME/.local/bin
+export GOPATH=$HOME/Dev/go
 
 # Set name of the theme to load --- if set to "random", it will
 # load a random theme each time oh-my-zsh is loaded, in which case,
@@ -102,12 +103,11 @@ alias polyconf="vim ~/.config/polybar/config"
 alias py="python3"
 alias cpy="~/.miniconda3/bin/python"
 alias vimconf="vim ~/.vimrc"
+alias nvimconf="vim ~/.config/nvim/init.vim"
 alias c="clear"
 alias pavu="pavucontrol"
 alias charmap="gucharmap"
 
-# Custom neofetch when loading shell
-neofetch --w3m --source ~/Pictures/Personal/Lieblingsmensch.jpg --size 320px
+# running following commands before entering the terminal
+neofetch
 
-# export $GOPATH
-export GOPATH=$HOME/Dev/go
