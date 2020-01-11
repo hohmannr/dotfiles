@@ -13,6 +13,8 @@ Plugin 'SirVer/ultisnips'
 Plugin 'scrooloose/nerdtree'
 Plugin 'Yggdroot/indentLine'
 Plugin 'tpope/vim-fugitive'
+Plugin 'fatih/vim-go'
+Plugin 'powerline/powerline'
 
 call vundle#end()
 
@@ -50,9 +52,12 @@ syntax on
 " setting color theme
 colorscheme peachpuff
 
+" setting color variables
+let lightbg = 234
+
 " highlighting cursor line
 set cursorline
-hi CursorLine cterm=None term=None ctermbg=234
+exe 'hi CursorLine cterm=None term=None ctermbg='. lightbg
 
 " highlighting visual mode text color
 hi Visual cterm=None ctermbg=0 ctermfg=None guibg=Grey11
@@ -75,15 +80,15 @@ hi Pmenu ctermfg=252 ctermbg=234
 
 " hide NERDTree '/' after directory
 augroup nerdtreehidecwd
-	autocmd!
-	autocmd FileType nerdtree setlocal conceallevel=3 | syntax match NERDTreeDirSlash #/$# containedin=NERDTreeDir conceal contained
+    autocmd!
+    autocmd FileType nerdtree setlocal conceallevel=3 | syntax match NERDTreeDirSlash #/$# containedin=NERDTreeDir conceal contained
 augroup end
 
 " hide cursor line in inactive window
 augroup CursorLineOnlyInActiveWindow
-  autocmd!
-  autocmd VimEnter,WinEnter,BufWinEnter * setlocal cursorline
-  autocmd WinLeave * setlocal nocursorline
+    autocmd!
+    autocmd VimEnter,WinEnter,BufWinEnter * setlocal cursorline
+    autocmd WinLeave * setlocal nocursorline
 augroup END
 
 " replace tabs with spaces
@@ -104,16 +109,16 @@ au BufReadPost,BufNewFile *.tex call vimtex#init()
 "set cindent
 "set cinoptions=g-1
 
-" Command preferences
+" command preferences
 " Latex
 ab vtc VimtexCompile
 
-" Quick typo fixing
+" quick typo fixing
 autocmd FileType latex setlocal spell
 set spelllang=en_us
 inoremap <C-l> <c-g>u<Esc>[s1z=`]a<c-g>u
 
-" Display typos as red text with underline
+" display typos as red text with underline
 hi clear SpellBad
 hi SpellBad cterm=underline ctermfg=88
 
@@ -121,9 +126,10 @@ hi SpellBad cterm=underline ctermfg=88
 hi! TabChar ctermbg=NONE
 au BufReadPost,BufNewFile * syn match TabChar " "
 
-" Switch buffer shortcut
+" switch buffer shortcut
 nmap <C-w> :bn<CR>
 
 " turn on auto-indent
 set autoindent
 set smartindent
+

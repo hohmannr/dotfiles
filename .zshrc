@@ -1,8 +1,9 @@
 # If you come from bash you might have to change your $PATH.
 # export PATH=$HOME/bin:/usr/local/bin:$PATH
 
-# Path to your oh-my-zsh installation.
+# change environmental variables
 export ZSH="/home/akio/.oh-my-zsh"
+export PATH=$PATH:$HOME/.local/bin
 
 # Set name of the theme to load --- if set to "random", it will
 # load a random theme each time oh-my-zsh is loaded, in which case,
@@ -62,8 +63,10 @@ ZSH_THEME="agnoster"
 # Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
-plugins=(git
-	 zsh-syntax-highlighting)
+plugins=(
+    git
+	zsh-syntax-highlighting
+)
 
 source $ZSH/oh-my-zsh.sh
 
