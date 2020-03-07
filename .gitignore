@@ -3,24 +3,38 @@
 
 # exceptions 
 !.gitignore
+
 !.zshrc
+!.zprofile
 
 !.config/
 !.config/polybar/
 !.config/polybar/config
 !.config/rofi/
-!.config/rofi/config
+!.config/rofi/conf.xres
+!.config/urxvt/
+!.config/urxvt/conf.xres
 !.config/i3/
 !.config/i3/config
 !.config/nvim/
 !.config/nvim/init.vim
 !.config/neofetch/
 !.config/neofetch/config.conf
+!.config/termite/
+!.config/termite/config
+!.config/kitty/
+!.config/kitty/kitty.conf
+
+!.config/nvim/
+!.config/nvim/init.vim
+!.config/nvim/plugin
+!.config/nvim/plugin/*
 
 !.vim/
 !.vim/UltiSnips/
 !.vim/UltiSnips/*
 
+!.config/nvim
 !.vimrc
 
 !.scripts/

@@ -30,7 +30,8 @@ font pango:monospace 10
 floating_modifier $mod
 
 # start a terminal
-bindsym $mod+Return exec i3-sensible-terminal
+#bindsym $mod+Return exec urxvt
+bindsym $mod+Return exec kitty -1 --single-instance
 
 # kill focused window
 bindsym $mod+q kill
@@ -164,13 +165,14 @@ bindsym $mod+r mode "resize"
 # }
 
 ########### CUSTOMIZATION ###########
+
 # i3-gaps edit
 for_window [class=".*"] border pixel 0
 gaps inner 25
 gaps outer 25
 
 # enabling compton
-exec_always --no-startup-id compton
+exec_always --no-startup-id compton --shadow-exclude '!focused'
 
 # adding system lock with blurred screen shortcut
 bindsym $mod+Shift+KP_Divide exec --no-startup-id i3lock --blur=4 --keylayout 2 --insidevercolor=00000000 --insidewrongcolor=00000000 --insidecolor=ffffff00 --ringvercolor=66a9b9ff --ringwrongcolor=d23d3dff --ringcolor=00000000 --line-uses-inside --keyhlcolor=ffffffff --bshlcolor=6d878dff --separatorcolor=00000000 --verifcolor=00000000 --wrongcolor=00000000 --timecolor=ffffffff --timestr="%H:%M" --datestr="%d.%m.%Y" --layoutcolor=ffffffff --datecolor=ffffffff --force-clock --timesize=64 --datesize=16 --radius 144 --ring-width 12.0
@@ -180,13 +182,13 @@ bindsym $mod+Shift+KP_Subtract exec --no-startup-id sudo shutdown now
 bindsym $mod+Shift+KP_Multiply exec --no-startup-id sudo reboot
 
 # adding screenshot shortcut
-bindsym --release $mod+Prior exec --no-startup-id scrot 'screen_%s-%H-%M_%d.%m.%Y_$wx$h.png' -e 'mv $f ~/Pictures/Screenshots'
-bindsym --release $mod+Next exec --no-startup-id scrot -u 'window_%s-%H-%M_%d.%m.%Y_$wx$h_.png' -e 'mv $f ~/Pictures/Screenshots'
+bindsym --release $mod+Prior exec --no-startup-id screenshot
+bindsym --release $mod+Next exec --no-startup-id screenshot -w
 
 # adding volume shortcuts
 bindsym --release XF86AudioMute exec --no-startup-id amixer set Master toggle
-bindsym XF86AudioRaiseVolume exec --no-startup-id amixer set Master 10%+
-bindsym XF86AudioLowerVolume exec --no-startup-id amixer set Master 10%-
+bindsym XF86AudioRaiseVolume exec --no-startup-id amixer set Master 2%+
+bindsym XF86AudioLowerVolume exec --no-startup-id amixer set Master 2%-
 
 # executing polybar
 exec_always --no-startup-id polybar custom

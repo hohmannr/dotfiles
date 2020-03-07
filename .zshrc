@@ -1,7 +1,6 @@
 # If you come from bash you might have to change your $PATH.
 # export PATH=$HOME/bin:/usr/local/bin:$PATH
-
-# change environmental variables
+# export environmental variables
 export ZSH="/home/akio/.oh-my-zsh"
 export PATH=$PATH:$HOME/.local/bin
 export GOPATH=$HOME/Dev/go
@@ -10,7 +9,7 @@ export GOPATH=$HOME/Dev/go
 # load a random theme each time oh-my-zsh is loaded, in which case,
 # to know which specific one was loaded, run: echo $RANDOM_THEME
 # See https://github.com/robbyrussell/oh-my-zsh/wiki/Themes
-ZSH_THEME="agnoster"
+ZSH_THEME="my-plugin"
 
 # Set list of themes to pick from when loading at random
 # Setting this variable when ZSH_THEME=random will cause zsh to load
@@ -98,16 +97,25 @@ source $ZSH/oh-my-zsh.sh
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 alias i3conf="vim ~/.config/i3/config"
 alias xconf="vim ~/.Xresources"
+alias xsrc="xrdb ~/.Xresources"
 alias zconf="vim ~/.zshrc"
+alias zsrc="source ~/.zshrc"
 alias polyconf="vim ~/.config/polybar/config"
 alias py="python3"
 alias cpy="~/.miniconda3/bin/python"
 alias vimconf="vim ~/.vimrc"
 alias nvimconf="vim ~/.config/nvim/init.vim"
+alias termiteconf="vim ~/.config/termite/config"
+alias kittyconf="vim ~/.config/kitty/kitty.conf"
+alias i3src="i3-msg reload && i3-msg restart"
 alias c="clear"
 alias pavu="pavucontrol"
 alias charmap="gucharmap"
+alias vim="nvim"
 
 # running following commands before entering the terminal
 neofetch
+
+# setting terminal to accept CTRL+S as input
+stty -ixoff
 
