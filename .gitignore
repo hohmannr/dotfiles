@@ -27,7 +27,7 @@
 
 !.config/nvim/
 !.config/nvim/init.vim
-!.config/nvim/plugin
+!.config/nvim/plugin/
 !.config/nvim/plugin/*
 
 !.vim/

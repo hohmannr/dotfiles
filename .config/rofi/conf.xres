@@ -1,0 +1,16 @@
+rofi.combi-modi:	    window,drun,ssh
+rofi.modi:		        combi
+rofi.lines:		        10
+rofi.separator-style:	none
+rofi.hide-scrollbar:	true
+rofi.font:		        Source Code Pro 14
+rofi.width:		        33
+rofi.bw:		        0
+rofi.padding:		    32
+rofi.line-padding:	    4
+
+! State:		    bg	fg	bgalt		hlbg		hlfg
+rofi.color-window:	BG,	FG,	#000000,	#000000,	#000000
+rofi.color-normal:	BG,	FG,	BG,		    GREEN0,		#000000
+rofi.color-active:	BG,	BG,	BLUE0,		GREEN0,		#000000
+

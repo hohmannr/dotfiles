@@ -1,0 +1,12 @@
+URxvt.urlLauncher:	            firefox
+URxvt.scrollBar:	            false
+URxvt.scrollstyle:	            next
+URxvt.font:		                xft:SauceCodePro Nerd Font Mono:style=Medium:size=12
+URxvt.internalBorder:	        40
+URxvt.keysym.Shift-Control-V:	eval:paste_clipboard
+URxvt.keysym.Shift-Control-C:	eval:selection_to_clipboard
+URxvt.perl-ext-common:	        default,resize-font
+URxvt.resize-font.smaller:	    C-minus
+URxvt.resize-font.bigger:	    C-plus
+URxvt.iso14755:                 false
+URxvt.iso14755_52:              false
